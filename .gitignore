@@ -1,0 +1,13 @@
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Oracle SQL Developer files
+*.log
+*.tmp
+
+# Environment files
+.env

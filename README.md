@@ -1,41 +1,47 @@
 # PL/SQL Transaction Management System
 
-A database-based Transaction Management System developed using **Oracle SQL and PL/SQL**. The project demonstrates the use of relational database design, sequences, indexes, triggers, and PL/SQL packages to manage and process financial transactions efficiently.
+A Transaction Management System built using Oracle SQL and PL/SQL.
 
-## 📌 Project Overview
+## Features
 
-The system is designed to manage transaction-related operations through a structured Oracle database. It uses PL/SQL programming concepts to organize business logic and automate database operations.
+- Customer management
+- Debit transactions
+- Credit transactions
+- Automatic balance updates
+- Transaction history tracking
+- Insufficient balance validation
+- Prevention of negative balances
+- Database trigger implementation
+- PL/SQL package implementation
 
-The project demonstrates practical implementation of:
+## Technologies Used
 
-- Database table creation and management
-- Primary key and foreign key relationships
-- Oracle sequences for ID generation
-- Indexing for query optimization
-- Database triggers
-- PL/SQL packages
-- Procedures and reusable database logic
-- Transaction processing and management
+- Oracle Database
+- Oracle SQL Developer
+- SQL
+- PL/SQL
 
-## 🛠️ Technologies Used
+## Database Components
 
-- **Oracle Database**
-- **SQL**
-- **PL/SQL**
-- **Oracle SQL Developer for VS Code**
-- **Visual Studio Code**
-- **Git**
-- **GitHub**
+### Tables
+- CUSTOMERS
+- TRANSACTIONS
 
-## 📂 Project Structure
+### Sequence
+- TRANSACTIONS_SEQ
 
-```text
-PL-SQL-Transaction-Management-System/
-│
-├── README.md
-├── tables.sql
-├── sequences.sql
-├── indexes.sql
-├── triggers.sql
-├── pkg_transaction.sql
-└── pkg_transaction_body.sql
+### Index
+- IDX_CUSTOMER_ID
+
+### Trigger
+- PREVENT_NEGATIVE_BALANCE
+
+### Package
+- PKG_TRANSACTION
+
+## Transaction Process
+
+The system processes transactions using the following procedure:
+
+```sql
+pkg_transaction.process_transaction
